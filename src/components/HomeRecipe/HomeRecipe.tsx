@@ -1,17 +1,17 @@
 import {useEffect} from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { apiKey } from '../../api/apiKey';
 import baseApiUrl from '../../api/baseApiUrl';
 
-import { addRecipes } from '../../features/recipe/recipeSlice';
+import { addRecipes, getAllRecipes } from '../../features/recipe/recipeSlice';
 
 import RecipeListing from '../Recipe/RecipeListing';
 
 
-
 export default function Home() {
     const dispatch = useDispatch();
+    const recipes = useSelector(getAllRecipes);
 
     useEffect(() => {
         const fetchRecipes = async () => {
@@ -22,6 +22,6 @@ export default function Home() {
     }, []);
 
     return (
-        <RecipeListing />
+        <RecipeListing recipes={recipes} />
     );
 }

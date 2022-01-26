@@ -1,5 +1,5 @@
 export interface IRecipeList {
-    allRecipes: IRecipeItem[];
+    recipes?: IRecipeItem[];
   }
 
 export interface IRecipeItem {

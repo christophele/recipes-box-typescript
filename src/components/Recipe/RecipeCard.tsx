@@ -4,11 +4,22 @@ import {
     CardMedia,
     CardContent,
     IconButton,
-    Typography
+    Typography,
+    CardActions,
+    Button
 } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import {useDispatch} from 'react-redux';
+import { addFavoriteRecipe } from '../../features/recipe/recipeSlice';
 
 export default function RecipeCard(props:any) {
+    const dispatch = useDispatch();
+
+    const addToFavorite = (recipe:any) => {
+        console.log(recipe, 'recipppeee')
+        dispatch(addFavoriteRecipe(recipe));
+    }
+
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardHeader
@@ -32,6 +43,11 @@ export default function RecipeCard(props:any) {
                 if you like.
                 </Typography>
             </CardContent>
+            <CardActions>
+                <Button onClick={() => addToFavorite(props.recipe)}>
+                    Add to favorite
+                </Button>
+            </CardActions>
         </Card>
     )
 }
