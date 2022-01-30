@@ -1,6 +1,6 @@
 import RecipeListing from "../../components/Recipe/RecipeListing";
 import { useSelector } from 'react-redux';
-import { getAllFavoritesRecipes } from "../../features/recipe/recipeSlice";
+import { getAllFavoritesRecipes } from "../../redux/features/recipe/recipeSlice";
 
 export default function Favorites() {
     const favoritesRecipes = useSelector(getAllFavoritesRecipes);

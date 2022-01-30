@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IRecipeList, IRecipeItem } from '../../data/models/recipe.model';
+import { IRecipeList, IRecipeItem } from '../../../data/models/recipe.model';
 
 export interface RecipeState {
     allRecipes: IRecipeItem[];

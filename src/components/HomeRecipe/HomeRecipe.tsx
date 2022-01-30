@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { apiKey } from '../../api/apiKey';
 import baseApiUrl from '../../api/baseApiUrl';
 
-import { addRecipes, getAllRecipes } from '../../features/recipe/recipeSlice';
+import { addRecipes, getAllRecipes } from '../../redux/features/recipe/recipeSlice';
 
 import RecipeListing from '../Recipe/RecipeListing';
 

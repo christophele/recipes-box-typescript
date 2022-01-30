@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {useDispatch} from 'react-redux';
-import { addFavoriteRecipe } from '../../features/recipe/recipeSlice';
+import { addFavoriteRecipe } from '../../redux/features/recipe/recipeSlice';
 
 export default function RecipeCard(props:any) {
     const dispatch = useDispatch();
